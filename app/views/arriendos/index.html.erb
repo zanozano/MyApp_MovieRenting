@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container container-custom col-8">
+  <h1>Arriendos</h1>
+
+  <div id="arriendos">
+    <%= render partial: 'arriendo', collection: @arriendos %>
+  </div>
+
+  <%= link_to "Nuevo arriendo", new_arriendo_path, class: "btn btn-primary" %>
+</div>
+
+

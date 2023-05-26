@@ -1,0 +1,18 @@
+<div class="container container-custom col-4">
+<h2>New arriendo</h2>
+<%= form_with(model: arriendo, local: true, class: "form") do |form| %>
+  <div class="field mb-4">
+    <%= form.label :cliente_id, class: "form-label" %>
+    <%= form.collection_select :cliente_id, Cliente.all, :id, :nombre, { prompt: "Seleccionar cliente" }, class: "form-select" %>
+  </div>
+
+  <div class="field mb-4">
+    <%= form.label :pelicula_id, class: "form-label" %>
+    <%= form.collection_select :pelicula_id, Pelicula.all, :id, :titulo, { prompt: "Seleccionar película" }, class: "form-select" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Guardar", class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>

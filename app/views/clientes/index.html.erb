@@ -1,0 +1,22 @@
+<div class="container container-custom">
+<h2 class="mb-4">Clientes Disponibles</h2>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clientes_disponibles.each do |cliente| %>
+      <tr>
+        <td><%= cliente.nombre %></td>
+        <td><%= cliente.email %></td>
+        <td><%= cliente.telefono %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<a class="btn btn-primary" href="<%= arriendos_path %>">Ver Arriendos</a>
+</div>

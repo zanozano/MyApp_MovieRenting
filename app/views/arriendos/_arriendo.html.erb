@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>Cliente</th>
+      <th>Película</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= arriendo.id %></td>
+      <td><%= arriendo.cliente.nombre %></td>
+      <td><%= arriendo.pelicula.titulo %></td>
+      <td><%= link_to "Mostrar arriendo", arriendo, class: "btn btn-secondary" %></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,7 @@
+.container-custom {
+    padding: 24px !important;
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+}

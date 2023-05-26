@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @arriendo %>
+
+<div>
+  <%= link_to "Editar Arriendo", edit_arriendo_path(@arriendo),class:"btn btn-info" %>
+  <%= link_to "Volver a Arriendos", arriendos_path, class:"btn btn-secondary" %>
+
+  <%= button_to "Eliminar este arriendo", @arriendo, method: :delete, class:"btn btn-danger" %>
+</div>
