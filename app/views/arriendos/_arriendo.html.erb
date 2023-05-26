@@ -1,9 +1,13 @@
+
+<h1>Detalle Arriendo</h1>
+
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
       <th>ID</th>
       <th>Cliente</th>
       <th>Película</th>
+      <th>Fecha de creación</th>
       <th></th>
     </tr>
   </thead>
@@ -12,7 +16,10 @@
       <td><%= arriendo.id %></td>
       <td><%= arriendo.cliente.nombre %></td>
       <td><%= arriendo.pelicula.titulo %></td>
-      <td><%= link_to "Mostrar arriendo", arriendo, class: "btn btn-secondary" %></td>
+      <td><%= arriendo.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= link_to "Mostrar arriendo", pelicula_path(arriendo.pelicula), class: "btn btn-secondary" %></td>
     </tr>
   </tbody>
 </table>
+<hr>
+

@@ -1,12 +1,34 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="container container-custom col-8">
-  <h1>Arriendos</h1>
-
-  <div id="arriendos">
-    <%= render partial: 'arriendo', collection: @arriendos %>
-  </div>
-
+  <h2>Arriendos</h2>
+    <div id="arriendos">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Cliente</th>
+        <th>Película</th>
+        <th>Fecha de creación</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @arriendos.each do |arriendo| %>
+        <tr>
+          <td><%= arriendo.id %></td>
+          <td><%= arriendo.cliente.nombre %></td>
+          <td><%= arriendo.pelicula.titulo %></td>
+          <td><%= arriendo.created_at.strftime("%d/%m/%Y") %></td>
+          <td><%= link_to "Mostrar arriendo", arriendo, class: "btn btn-secondary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+  
+<hr>
+<div class="d-flex gap-2">
+  <%= link_to "Ver Clientes", clientes_path, class: "btn btn-success" %>
   <%= link_to "Nuevo arriendo", new_arriendo_path, class: "btn btn-primary" %>
 </div>
 
