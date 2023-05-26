@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 require 'httparty'
 
@@ -29,10 +22,8 @@ end
       puts result['title']
     end
 
-    # Obtener los datos de la primera película de los resultados de la búsqueda
     pelicula_data = results.first
 
-    # Crear una instancia de Pelicula y asignar los datos obtenidos de la API
     nueva_pelicula = Pelicula.create(
       titulo: pelicula_data['title'],
       portada: pelicula_data['poster_path'],
